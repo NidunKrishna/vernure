@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="C:\Users\HP\Desktop\c\carousall.css"/>
+    <link rel="stylesheet" href="C:\Users\HP\Desktop\c\navbar.css"/>
+    <link rel="stylesheet" href="C:\Users\HP\Desktop\c\images\carousal.css"/>
+    <link rel="stylesheet" href="C:\Users\HP\Desktop\c\questions.css" />
+    <link rel="stylesheet" href="C:\Users\HP\Desktop\c\footer.css" />
+
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap');
+        .animated-element {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.animate {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.design-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(22, 39, 38);
+  min-height: 100vh;
+  padding: 100px 0;
+  font-family: Jost;
+}
+
+.design {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-content {
+  padding: 20px;
+  background: #1f1f1f;
+  -webkit-box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
+          box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
+  border-radius: 5px;
+  color: white;
+  padding: 1.75rem;
+  transition: 0.4s ease;
+  overflow-wrap: break-word !important;
+  margin: 1rem;
+  margin-bottom: 30px;
+  border-radius: 6px;
+}
+.contentBox {
+    width: calc(100% - 80px);
+    box-sizing: border-box;
+    padding: 0 16px;
+  }
+  .eachBox1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--grey);
+  }
+  .eachBox1:last-child {
+    border: none;
+  }
+  .contentBox h1 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 16px 0;
+    word-spacing: 5px;
+    color: var(--white);
+  }
+  .contentBox p {
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 200;
+    padding: 0 0 16px 0;
+    color: var(--white);
+  }
+  
+.timeline-component {
+  margin: 0px 20px 20px 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .timeline {
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+  }
+  .timeline-middle {
+    position: relative;
+    background-image: linear-gradient(45deg, lawngreen, rgb(40, 210, 40), #14421c);
+    width: 3px;
+    height: 100%;
+  }
+  .main-middle {
+    opacity: 0;
+  }
+  .timeline-circle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, lawngreen, rgb(40, 210, 40), #14421c);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+        .fluid-container{
+            background-color: rgb(22, 39, 38);
+            height: 70vh;
+        }
+        .section-1{
+            display: flex;
+            justify-content: space-between;
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        .fonts{
+            margin-left: 10vh;
+        }
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+        .section-2{
+            background-color: rgb(22, 39, 38);
+            height: 60vh;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 10px;
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        .line{
+            background-color: lawngreen;
+            height: 1px;
+        } 
+        .line-b{
+            background-color: lawngreen;
+            height: 1px;
+            width: 500vh;
+        } 
+        .line-f{
+            background-color: lawngreen;
+            height: 100vh;
+            width: 1px;
+        }
+        .line-v{
+            background-color: lawngreen;
+            height: 60vh;
+            width: 1px;
+        }
+        .companies{
+            display: flex;
+            justify-content: space-between;
+            color: #a6a6a6;
+            font-family: verdana;
+            font-size:60px;
+            margin-top: 10vh;
+            margin-left: 15vh;
+        }
+        .section-3{
+            background-color: rgb(22, 39, 38);
+            height: 65vh;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 10px;
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        .scroll-box {
+            width: 45vw;
+            height: 54.9vh;
+            overflow-y: scroll;
+            padding: 20px;
+            background-color:   rgb(22, 39, 38);
+            border-radius: 8px;
+        }
+        .scroll-box::-webkit-scrollbar {
+            display: none; 
+        }
+        .section {
+            margin-bottom: 20px;
+            color: white;
+            font-family: verdana;
+            word-spacing: 5px;
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        h2{
+            color: #BFEF4B;
+            font-weight: 100;
+            font-family: verdana;
+        }
+        .see-here{
+                background-color: blueviolet;
+                color: white;
+                font-family: verdana;
+                font-weight: 100;
+                border-radius: 50px;
+                height: 14vh;
+                width: 35vh;
+                margin-left: 34vh;
+        }
+        .section-4{
+            background-color: rgb(22, 39, 38);
+            height: 55vh;
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        .section-5{
+            background-color: rgb(22, 39, 38);
+            height: 70vh;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 10px; 
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        .section-6{
+            background-color: rgb(22, 39, 38);
+            height: 130vh;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 10px; 
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        .section-7{
+            background-color: rgb(22, 39, 38);
+            height: 100vh;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 10px; 
+             animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+
+        }
+        .section-8{
+            background-color: rgb(22, 39, 38);
+            height: 110vh;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 10px; 
+             animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+
+        }
+        .section-9{
+            background-color: rgb(22, 39, 38);
+            height: 9%;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 10px; 
+             animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+
+        }
+        .gain{
+            margin-left: 20vh;
+            margin-top: 10vh;
+        }
+        .gain h1{
+            color: #BFEF4B; 
+            font-family:verdana; 
+            font-weight: 100;
+            font-size: 35px;
+        }
+        .iconNumber {
+    font-size: 80px;
+    vertical-align: text-top;
+    line-height: 80px;
+    text-shadow: 0 0 3px var(--black);
+    background-color:#BFEF4B;
+    color: var(--white);
+    background-color: rgb(22, 39, 38);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container text-center">
+        <div class="row">
+            <nav class="navbar">
+                <div class="navBox">
+                  <div class="logo">
+                    <img src="C:\Users\HP\Desktop\c\images\Target\logo-removebg-preview.png" alt="Company logo"/>
+                  </div>
+                  <div class="navLogin">
+                    <!-- <button style="background-color:rgb(22, 39, 38); color: white;font-family: Verdana;font-weight: 100;font-size: 18px;">Login</button> -->
+                    <button style="background-color: lawngreen;font-family: verdana;height: 50px;width: auto;font-size: 15px; margin-left: 7vh;font-weight: 100;">
+                        Join our Webinar</button>
+                  </div>
+                  <div class="navMenu " id="openNav">
+                    <i class="fas fa-bars"></i>
+                  </div>
+                </div>
+              </nav>
+          <div class="col-6 col-sm-3">
+            <div class="fluid-container">
+                <div class="section-1">
+                    <div class="fonts">
+                            <h1 style="color: #BFEF4B; font-family:verdana; font-weight: 100;font-size: 50px;">Transform Your Career with <br />Expert-Led Training
+                            </h1>
+                            <p style="font-family: verdana;font-weight: 10;color: white;word-spacing: 7px;margin-top: 7vh;font-size: large;">At VRG Technology, we're excited to offer a complete UI/UX Design Bootcamp.<br /> <br />It's designed to give
+                                you the skills you need to succeed in digital design.<br /> <br />Whether you're starting a new career or
+                                improving your current skills,<br /><br /> our bootcamp is designed to provide hands-on learning, expert
+                                guidance, and projects. <br /> <br />This will help you stand out in the job market.
+                                </p>
+                                <button style="background-image:linear-gradient(45deg,aqua,lightgreen);height: 9vh;
+                                border-radius: 30px;width: 25vh;color: white;font-size: 14px;font-family: verdana;
+                                margin-top: 60px;color: white;font-weight: 300;cursor: pointer;
+                                ">Register for bootcamp</button>
+                                
+                    </div>
+                    <div>
+                        <!-- <h1 style="color: #BFEF4B; font-family:verdana; font-weight: 100;font-size: 30px;">400+</h1> -->
+                        <div class="image-container">
+                        <img style="height: 70vh; width: auto;border-radius: 0%;" src="C:\Users\HP\Desktop\c\images\Target\person-removebg-preview.png"/>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="line"></div>
+          </div>
+          <div class="col-6 col-sm-3">
+            <div class="section-2">
+                <div class="fonts">
+                    <h3 style="font-family: verdana;font-weight: 100;color: white;">Trusted by many comapnies</h3>
+                    <h1 style="color: #BFEF4B; font-family:verdana; font-weight: 100;font-size: 45px;margin-top: 4vh;">
+                        There are numerous 
+                        <br/>companies that want 
+                        <br/> UI designers. 
+                    </h1>
+                    <div class="companies">
+                        <p id="comp">Apple</p>
+                        <!-- <p>Amazon</p>
+                        <p>Google</p> -->
+                    </div>
+                </div>
+                <div class="line-v"></div>
+           <div>
+            <img style="height: 70vh; width: 70vh;" src="C:\Users\HP\Desktop\c\images\1000015705-removebg.png"/>
+        </div>
+          </div>
+          <div class="line"></div>
+
+          <!-- <div class="w-100">
+            <div>
+                <div>
+
+                </div>
+            </div>
+          </div> -->
+      
+          <div class="col-6 col-sm-3">
+            <div class="section-3">
+                <div>
+                    <h1 style="color: #BFEF4B; font-family:verdana; font-weight: 100;font-size: 45px;margin-left: 10vh;">Why Join Our Bootcamp?
+                    </h1>
+                    <p style="color: aliceblue; font-family: verdana;margin-left: 10vh;
+                    word-spacing: 5px;margin-top: 5vh;">VRG's UI/UX Bootcamp offers a transformative experience for aspiring<br /> <br />designers. Through immersive learning,
+                         participants master essential skills in<br /> <br />design thinking, prototyping, and user research.
+                          With a focus on practical<br /> <br />application, the program propels careers to new heights in the dynamic <br /><br />
+                          field of UI/UX design.</p>
+                    <div>
+                        <h1 style="color: #BFEF4B; font-family:verdana; font-weight: 100;font-size: 45px;margin-left: 10vh;margin-top: 5vh;">Scroll For More info
+                            <img style="height: 55px; "  src="C:\Users\HP\Desktop\c\right-drawn-arrow.png"/> </h1>
+                    </div>
+                </div>
+                <div>
+                    <div class="scroll-box">
+                        <div class="scroll-box">
+                            <div class="section">
+                                <img style="height: 250px;" src="C:\Users\HP\Desktop\c\images\opp.png"/>  <h2>Exciting Career Opportunities</h2>
+                                <p>Unlock high-paying job prospects in UI/UX design. Our program equips you<br/><br/> with the skills and knowledge to excel in the competitive tech industry.</p>
+                            </div>
+                            <div class="section">
+                                <img style="height: 250px;" src="C:\Users\HP\Desktop\c\learn-removebg-preview.png"/>
+                                <h2>Interactive Learning Approach</h2>
+                                <p>Experience hands-on learning with real-world projects. Gain confidence in <br/><br/>designing user-friendly interfaces and engaging experiences.</p>
+                            </div>
+                            <div class="section">
+                                <img style="height: 250px;" src="C:\Users\HP\Desktop\c\images\guide-removebg-preview.png"/>
+                                <h2>Guidance from Industry Experts</h2>
+                                <p>Receive personalized mentorship from seasoned professionals. Our mentors <br/><br/> are committed to your success, providing valuable feedback and support.</p>
+                            </div>
+                            <div class="section">
+                                <img style="height: 250px;" src="C:\Users\HP\Desktop\c\network-removebg-preview.png"/>
+                                <h2>Expand Your Professional Network</h2>
+                                <p>Connect with a diverse community of peers and industry professionals. Our <br/><br/> bootcamp offers networking opportunities to help you grow your career.</p>
+                            </div>
+                        </div>                        
+                </div>
+                <div class="line"></div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-3">
+            <div class="section-4">
+                <div>                                              
+<!--This is the main container that contains the whole timeline.-->
+<section class="design-section">
+    <div >
+        <h1 style="color: #BFEF4B; font-family:verdana; font-weight: 100;font-size: 45px;margin-left: 10vh;">Bootcamp Overview
+        </h1>
+        <p style="color: white;font-family: verdana;font-weight: 100;margin-top: 5vh;margin-bottom: 5vh;">Our UI/UX Design Bootcamp is an intensive, 
+            five-day program  that covers all aspects of <br/><br />User interface
+            and user experience design. Here's what you can expect
+            </p>
+    </div>
+    <div class="timeline ">
+
+        <div class="timeline-empty"></div>
+    
+        <div class="timeline-middle">
+            <div class="timeline-circle"></div>
+        </div>
+        <div class="timeline-component timeline-content animated-element">
+            <h3>Day-1</h3>
+            <p>
+                Figma Overview: Create an account, Figma Interface, Navigating Figma, Exploring Figma, Basics of shape, Basics of text, Power of the Pen, Button Basics, Grouping, Span the Gap, Auto layout, Basics of Prototyping
+            </p>
+        </div>
+    
+        <div class="timeline-component timeline-content animated-element">
+            <h3>Day-2</h3>
+            <p>
+                Recap (Day-1), UI Design Fundamentals: White Space, Contrast, Scale, Alignment, Colours, Typography, Visual Hierarchy
+            </p>
+        </div>
+    
+        <div class="timeline-middle">
+            <div class="timeline-circle"></div>
+        </div>
+        <div class="timeline-empty"></div>
+    
+        <div class="timeline-empty"></div>
+        
+    
+        <div class="timeline-middle">
+            <div class="timeline-circle"></div>
+        </div>
+        <div class="timeline-component timeline-content animated-element">
+            <h3>Day-3</h3>
+            <p>
+                Recap (Day-2), Component Design: Button design, Card design, Layout Design: Simple layout, Designing a hero section
+            </p>
+        </div>
+        <div class="timeline-empty"></div>
+    
+        <div class="timeline-empty"></div>
+        
+    
+        <div class="timeline-middle">
+            <div class="timeline-circle"></div>
+        </div>
+        <div class="timeline-component timeline-content animated-element">
+            <h3>Day-4</h3>
+            <p>
+                Recap (Day-3), Responsive Design: Figma responsive design workflow (Responsive grid system, Constraints, Auto layout for responsiveness), Simple responsive landing page
+            </p>
+        </div>
+        
+    
+        <div class="timeline-empty"></div>
+        
+        
+        <div class="timeline-middle">
+            <div class="timeline-circle"></div>
+        </div>
+        <div class="timeline-empty"></div>
+    
+        <div class="timeline-middle">
+            <div class="timeline-circle"></div>
+        </div>
+        
+        <div class="timeline-component timeline-content animated-element">
+            <h3>Day-5</h3>
+            <p>
+                Recap (Day-4), Prototyping: Sitemap, Information architecture, Wireframe, Prototyping (Creating subpage, Navigation prototyping, Scrolling), Page transition
+            </p>
+        </div>
+        
+    </div>
+    
+</div>
+</section>
+<div class="col-6 col-sm-3">
+    <div class="line"></div>
+    <div class="section-5">
+        <div>
+            <h1 style="color: #BFEF4B; font-family:verdana; font-weight: 100;font-size: 45px;margin-left: 10vh;">
+                Who Should Attend?
+            </h1>
+            <h3 style="color:white ;font-family: verdana; font-weight: 100;margin-left:10vh ;">Our bootcamp is ideal for
+            </h3>
+        <div>
+            <div style="color: white; font-family:verdana; font-weight: 100;margin-left: 30vh;font-size: larger;margin-top: 5vh;">
+        <p><img style="height: 38px;margin-top: 2vh;" src="C:\Users\HP\Desktop\c\images\Target\ui-design.png"/>Aspiring UI/UX Designers
+        </p>
+        <p><img style="height: 38px;margin-top: 2vh;" src="C:\Users\HP\Desktop\c\images\Target\ux.png"/>
+            Graphic Designers
+        </p>
+        <p><img style="height: 38px;margin-top: 2vh;" src="C:\Users\HP\Desktop\c\images\Target\designer.png"/>Web Designers
+        </p>
+        <p><img style="height: 38px;margin-top: 2vh;" src="C:\Users\HP\Desktop\c\images\Target\software.png"/>Developers and Engineers
+        </p>
+        <p><img style="height: 38px;margin-top: 2vh;" src="C:\Users\HP\Desktop\c\images\Target\analyst.png"/>Product Managers
+        </p>
+        <p><img style="height: 38px;margin-top: 2vh;" src="C:\Users\HP\Desktop\c\images\Target\globalization.png"/>Entrepreneurs
+        </p>
+    </div>
+    </div>
+        </div>
+        <div>
+            <img style="height: 69vh;" src="C:\Users\HP\Desktop\c\images\develop-web.gif"/>
+        </div>
+    </div>
+</div>
+<div class="col-6 col-sm-3">
+<div class="section-6">
+    <section class="section4">
+        <div class="outerBox">
+          <div class="mentors">
+            <h1 style="color: #BFEF4B; font-family:verdana; font-weight: 100;font-size: 45px;">Meet Our Instructors
+            </h1>
+          </div>
+          <p style="color: white; font-family:verdana; font-weight: 100;font-size: larger">
+            Our instructors are industry experts with years of experience in UI/UX design. They bring practical
+knowledge and real-world insights to the classroom, ensuring you receive the highest quality
+education
+        </p>
+          <div class="mentorCards">
+            <div class="cardArrow">
+              <button class="arrow_btn"><i class="fas fa-chevron-left"></i></button>
+            </div>
+            <div class="mainBox" id="mainBox">
+              <div class="eachCard">
+                <img src="C:\Users\HP\Desktop\c\images\company\d.jpg" alt="">
+                <div class="cardContent">
+                    Person
+                  <img src="images/company1.svg" alt="">
+                </div>
+              </div>
+              <div class="eachCard">
+                <img src="C:\Users\HP\Desktop\c\images\company\d.jpg" alt="">
+                <div class="cardContent">
+                    Person
+                  <img src="C:\Users\HP\Desktop\c\images\company\d.jpg" alt="">
+                </div>
+              </div>
+              <div class="eachCard">
+                <img src="C:\Users\HP\Desktop\c\images\company\d.jpg" alt="">
+                <div class="cardContent">
+                    Person
+                  <img src="images/company1.svg" alt="">
+                </div>
+              </div>
+              <div class="eachCard">
+                <img src="C:\Users\HP\Desktop\c\images\company\d.jpg" alt="">
+                <div class="cardContent">
+                    Person
+                  <img src="images/company1.svg" alt="">
+                </div>
+              </div>
+              <div class="eachCard">
+                <img src="C:\Users\HP\Desktop\c\images\company\d.jpg" alt="">
+                <div class="cardContent">
+                    Person
+                  <img src="C:\Users\HP\Desktop\c\images\company\d.jpg" alt="">
+                </div>
+            </div>
+            </div>
+            <div class="cardArrow">
+              <button class="arrow_btn"><i class="fas fa-chevron-right"></i></button>
+          </div>
+          </div>
+          <div class="smallArrows">
+            <div class="cardArrow arrowSmall">
+              <button class="arrow_btn"><i class="fas fa-chevron-left"></i></button>
+            </div>
+            <div class="cardArrow arrowSmall">
+              <button class="arrow_btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="experts">
+          <h1 style="color: #BFEF4B; font-family:verdana; font-weight: 100;font-size: 45px;margin-left: 10vh;">Experts</h1>
+          <div  class="companyLogos rightMovement" id="scroll-container">
+            <div class="moveBox" id="Scroll-text">
+              <div><img src="images/company/logo1.svg" alt=""></div>
+              <div><img src="images/company/logo2.svg" alt=""></div>
+              <div><img src="images/company/logo3.svg" alt=""></div>
+              <div><img src="images/company/logo4.svg" alt=""></div>
+              <div><img src="images/company/logo5.svg" alt=""></div>
+            </div>
+            <div  class="moveBox">
+              <div><img src="images/company/logo1.svg" alt=""></div>
+              <div><img src="images/company/logo2.svg" alt=""></div>
+              <div><img src="images/company/logo3.svg" alt=""></div>
+              <div><img src="images/company/logo4.svg" alt=""></div>
+              <div><img src="images/company/logo5.svg" alt=""></div>
+            </div> 
+          </div>
+          <div  class="companyLogos" id="leftMovement" >
+            <div class="moveBox">
+              <div><img src="images/company/logo6.svg" alt=""></div>
+              <div><img src="images/company/logo1.svg" alt=""></div>
+              <div><img src="images/company/logo2.svg" alt=""></div>
+              <div><img src="images/company/logo3.svg" alt=""></div>
+              <div><img src="images/company/logo4.svg" alt=""></div>
+            </div>
+            <div  class="moveBox">
+              <div><img src="images/company/logo6.svg" alt=""></div>
+              <div><img src="images/company/logo1.svg" alt=""></div>
+              <div><img src="images/company/logo2.svg" alt=""></div>
+              <div><img src="images/company/logo3.svg" alt=""></div>
+              <div><img src="images/company/logo4.svg" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+</div>
+<div class="line"></div>
+<div class="col-6 col-sm-3">
+    <div class="section-7">
+        <div style="width: 180vh;">
+            <h1 style="color: #BFEF4B; font-family: verdana;margin-left: 10vh;font-weight: 100;font-size: 45px;">What You'll gain</h1>
+            <img style="margin-left: 10vh; width: 70vh;"src="https://media.tenor.com/0hXU-5lcfw8AAAAi/animal-frog.gif"/>
+        </div>
+        <div class="line-f"></div>
+        <div class="line-f"></div>
+        <div class="gain">
+            
+            <div class="rightContent">
+                <div class="eachBox1">
+                  <div class="iconNumber">1</div>
+                  <div class="contentBox">
+                    <h1>Practical Skills</h1>
+                    <p>Participants will work on real-world projects to apply theoretical concepts, enhancing their ability to create intuitive, user-friendly digital products.</p>
+                  </div>
+                </div>
+                <div class="line"></div>
+                <div class="eachBox1">
+                  <div class="iconNumber">2</div>
+                  <div class="contentBox">
+                    <h1>Professional Portfolio</h1>
+                    <p>Create a standout portfolio filled with impressive real-world design projects that highlight your unique skills and creativity.</p>
+                  </div>
+                </div>
+                <div class="line"></div>
+                <div class="eachBox1">
+                  <div class="iconNumber">3</div>
+                  <div class="contentBox">
+                    <h1>Job-Ready Expertise</h1>
+                    <p>Acquire the essential skills and knowledge needed to thrive in the competitive UI/UX job market, making you job-ready from day one.
+                    </p>
+                  </div>
+                </div>
+                <div class="line"></div>
+                <div class="eachBox1">
+                    <div class="iconNumber">4</div>
+                    <div class="contentBox">
+                      <h1>Mentorship and Support</h1>
+                      <p>Benefit from invaluable mentorship and support from seasoned industry professionals, guiding you towards unlocking your full potential in the dynamic world of UI/UX design.</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="line"></div>
+       </div>
+
+        </div>
+        <div class="col-6 col-sm-3">
+            <h1 style="color: #BFEF4B; font-family: verdana;margin-left: 20vh;font-weight: 100;font-size: 45px;margin-top: 5vh;">Benefits of Professional Groups
+            </h1>
+            <div class="section-8">
+                
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <div class="carousel-item">
+                            <img src="C:\Users\HP\Desktop\c\images\Gain\imac_top-02_4x.png" alt="Image 1">
+                            <div class="overlay-text">Graphic Designers
+                            </div>
+                            <div class="overlay-p">Develop a strong portfolio showcasing diverse design projects Collaborate with other creatives to expand your skills.
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="C:\Users\HP\Desktop\c\images\Gain\2.jpeg" alt="Image 2">
+                            <div class="overlay-text">Front end developers
+                            </div>
+                            <div class="overlay-p">Master HTML, CSS, and responsive design
+                                Understand UX principles and user behavior.</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="C:\Users\HP\Desktop\c\images\Gain\3.jpg" alt="Image 3">
+                            <div class="overlay-text">Software Developers</div>
+                            <div class="overlay-p">Learn multiple programming languages
+                                Contribute to open-source projects
+                                Understand software architecture and scalability.
+                                </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="C:\Users\HP\Desktop\c\images\Gain\Product-manager-Dribble-by-Hurca.jpg" alt="Image 3">
+                            <div class="overlay-text">Product managers
+                            </div>
+                            <div class="overlay-p">Develop a deep understanding of your product domain
+                                Improve communication and leadership skills
+                                Learn agile methodologies and project management.</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="C:\Users\HP\Desktop\c\images\Gain\5 (4).jpg" alt="Image 3">
+                            <div class="overlay-text"> Marketing professionals</div>
+                            <div class="overlay-p">Specialize in digital marketing channels
+                                Analyze data to optimize campaigns
+                                Stay informed about industry changes.</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="C:\Users\HP\Desktop\c\images\Gain\1.jpg" alt="Image 3">
+                            <div class="overlay-text">Entrepreneur and start up founders</div>
+                            <diV class="overlay-p">Network with mentors and other entrepreneurs
+                                Understand market needs and customer pain points
+                                Be adaptable and resilient in the face of challenges.</diV>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="C:\Users\HP\Desktop\c\images\Gain\6.jpg" alt="Image 3">
+                            <div class="overlay-text">HR and talent development professionals</div>
+                            <div class="overlay-p">Stay informed about HR laws and regulations.
+                                Enhance coaching and employee development skills.</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="C:\Users\HP\Desktop\c\images\Gain\5 (1).jpg" alt="Image 3">
+                            <div class="overlay-text">Customer experience professionals</div>
+                            <div class="overlay-p">Map customer journeys and identify pain points
+                                Implement feedback loops for continuous improvement.</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="C:\Users\HP\Desktop\c\images\Gain\5 (3).jpg" alt="Image 3">
+                            <div class="overlay-text">Business analysts
+                            </div>
+                            <div class="overlay-p">Master data analysis tools (e.g., Excel, SQL)
+                                Develop critical thinking and problem-solving abilities.</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="C:\Users\HP\Desktop\c\images\Gain\5 (5).jpg" alt="Image 3">
+                            <div class="overlay-text">Digital marketers</div>
+                            <div class="overlay-p">Optimize SEO strategies
+                                A/B test marketing campaigns
+                                Understand data analytics and conversion tracking.</div>
+                        </div>
+                    </div>
+                    <button id="prevBtn" class="carousel-btn prev">❮</button>
+                    <button id="nextBtn" class="carousel-btn next">❯</button>
+                </div>                          
+            </div> 
+            <div class="line-b"></div>
+            
+        </div>
+        <div class="col-6 col-sm-3">
+            <div class="section-9">
+                <div class="ccontainer">
+                    <h1 class="heading">Frequently Asked Questions</h1>
+                    
+                    <details>
+                      <summary>What is UI/UX design?</summary>
+                      <div>
+                        UI (User Interface) design focuses on the look and feel of digital interfaces, while UX (User Experience) design focuses on how users interact with those interfaces to achieve their goals.
+                      </div>
+                    </details>
+                    
+                    <details>
+                      <summary>Why is UI/UX design important?</summary>
+                      <div>
+                        Good UI/UX design enhances user satisfaction, improves usability, and increases the overall effectiveness of digital products.
+                      </div>
+                    </details>
+                    
+                    <details>
+                      <summary>What does a UI designer do?</summary>
+                      <div>
+                        A UI designer creates the visual elements of a digital product, including layout, colours, typography, and icons, to ensure a cohesive and aesthetically pleasing user interface.
+                      </div>
+                    </details>
+                    
+                    <details>
+                      <summary>What does a UX designer do?</summary>
+                      <div>
+                        A UX designer researches user needs and behaviours, creates wireframes and prototypes, and designs interactions to ensure a seamless and intuitive user experience.
+                      </div>
+                    </details>
+                    
+                    <details>
+                      <summary>How does UI/UX design benefit businesses?</summary>
+                      <div>
+                        Effective UI/UX design can lead to increased user engagement, higher conversion rates, and improved customer satisfaction, ultimately driving business success.
+                      </div>
+                    </details>
+                    
+                    <details>
+                      <summary>How does UI/UX design impact mobile apps?</summary>
+                      <div>
+                        UI/UX design is crucial for mobile apps as it ensures that users can navigate the app easily on smaller screens, leading to better engagement and retention.
+                      </div>
+                    </details>
+                  </div>
+                  
+            </div>
+        </div>
+        <div>
+            <div class="col-6 col-sm-3"> 
+                <div class="section-10">
+                    <footer class="footer">
+                        <div class="footer-container">
+                          <div class="footer-column">
+                            <h3>Contact Us</h3>
+                            <p>Email: info@example.com</p>
+                            <p>Phone: +1 (555) 123-4567</p>
+                          </div>
+                          <div class="footer-column">
+                            <h3>Follow Us</h3>
+                            <div class="social-icons">
+                              <a href="#"><img style="height: 50px;" src="C:\Users\HP\Desktop\c\images\company\facebook.png" alt="Facebook"></a>
+                              <a href="#"><img style="height: 50px;" src="C:\Users\HP\Desktop\c\images\company\twitter.png" alt="Twitter"></a>
+                              <a href="#"><img style="height: 50px;" src="C:\Users\HP\Desktop\c\images\company\linkedin.png" alt="LinkedIn"></a>                            </div>
+                          </div>
+                          <!-- <div class="footer-column">
+                            <h3>Quick Links</h3>
+                            <ul>
+                              <li><a href="#">Home</a></li>
+                              <li><a href="#">About Us</a></li>
+                              <li><a href="#">Services</a></li>
+                              <li><a href="#">Contact</a></li>
+                            </ul>
+                          </div> -->
+                        </div>
+                        <div class="footer-bottom">
+                          <p>&copy; 2024 VRG. All rights reserved.</p>
+                        </div>
+                      </footer>                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="C:\Users\HP\Desktop\c\carousal.js"></script>
+      <script>
+       document.addEventListener('DOMContentLoaded', function() {
+        const comp = [
+        "Amazon", 
+        "Apple", 
+        "Google", 
+        "Microsoft",
+        "Facebook",
+        "Tesla",
+        "Netflix",
+        "IBM",
+        "Intel",
+        "Cisco",
+        "Oracle",
+        "Adobe",
+        "Salesforce",
+        "Spotify",
+        "Uber",
+        "Airbnb",
+        "Snapchat",
+        "Pinterest",
+        "Twitter",
+        "Slack"
+      ];      
+      const colors = ["#a6a6a6"]
+      const text = document.getElementById("comp");
+      let index = 0;
+      const animatedElements = document.querySelectorAll('.animated-element');
+
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      function updateText() {
+        text.textContent = comp[index];
+        index = (index + 1) % comp.length;
+        text.style.color=colors;
+      }
+
+      updateText();
+      setInterval(updateText, 1000); 
+
+      const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+            observer.unobserve(entry.target);
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+      animatedElements.forEach(element => {
+        observer.observe(element);
+      });
+    });
+
+      </script>
+</body>
+</html>

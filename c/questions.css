@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+.ccontainer {
+  width: 80%;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.ccontainer h1 {
+  color: #BFEF4B;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+details {
+  background-color: #BFEF4B;
+  color: #333;
+  font-size: 1.2rem;
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-left: 2px solid #333; /* Left border */
+  border-right: 4px solid #333; /* Right border with more width */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+  border-radius: 20px;
+}
+
+summary {
+  padding: 0.5em 1em;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 100%; /* Make summary take full width of the details */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:after {
+  content: "\002B";
+  font-size: 1.5rem;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+
+details[open] summary:after {
+  content: "\00D7";
+}
+
+details[open] div {
+  padding: 0.5em 1em;
+  width: 100%; /* Make the div take full width of the details */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}

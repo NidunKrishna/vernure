@@ -1,0 +1,82 @@
+
+.carousel-container {
+    height: 90vh;
+    width: 140vh;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    border-left: solid 2vh #BFEF4B;
+    border-radius: 30%;
+    border-bottom:solid 7vh #BFEF4B;
+    margin-top: 5vh;
+}
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.carousel-item {
+    min-width: 100%;
+    position: relative;
+    transition: transform 0.5s ease;
+
+}
+.carousel-item img {
+    width: 140vh;
+    opacity: 0.4;
+    height: 90vh; /* Reduce the opacity of the image */
+    border-radius: 10%;
+    background-size: cover;
+}
+.overlay-text {
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent background */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: verdana;
+}
+.heading{
+    color: #BFEF4B;
+     font-family: verdana;
+     margin-left: 20vh;
+     font-weight: 100;
+     font-size: 45px;
+     margin-left: 10vh;
+}
+.overlay-p {
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent background */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: verdana;
+    word-spacing: 5px;
+}
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+.prev {
+    left: 10px;
+
+}
+.next {
+    right: 10px;
+
+}
